@@ -1,8 +1,19 @@
 import { Image, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import trips from "@/data/trips";
+import { useNavigation } from "expo-router";
 
 const TripDetails = () => {
+    const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    // Hide the tab bar
+    navigation.getParent()?.setOptions({ tabBarStyle: { display: "none" } });
+    return () => {
+      // Show the tab bar again when leaving
+      navigation.getParent()?.setOptions({ tabBarStyle: undefined });
+    };
+  }, [navigation]);
   const trip = trips[0];
   return (
     <View style={styles.container}>

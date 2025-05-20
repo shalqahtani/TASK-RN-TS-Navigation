@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Link } from "expo-router";
 
 interface TripCardProps {
   trip: {
@@ -17,9 +18,9 @@ interface TripCardProps {
 
 const TripCard = ({ trip }: TripCardProps) => {
   return (
-    <View style={styles.container}>
+    <Link style={styles.container} href={"/trips/TripDetails"} >
       <Image source={{ uri: trip.img }} style={styles.image} />
-    </View>
+    </Link>
   );
 };
 

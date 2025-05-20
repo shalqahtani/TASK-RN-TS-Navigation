@@ -1,10 +1,12 @@
 import DifficultyFilter from "@/component/DifficultyFilter";
 import Line from "@/component/Line";
 import Searchbar from "@/component/Searchbar";
-import TripList from "@/component/TripList";
 import trips from "@/data/trips";
 import { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { Tabs } from "expo-router";
+import TripList from "@/app/trips/TripList";
+
 
 export default function Index() {
   const [search, setSearch] = useState("");
@@ -31,6 +33,7 @@ export default function Index() {
         <Line width={"50%"} color="#1abc9c" />
       </View>
       <TripList trips={displayTrips} />
+     
     </View>
   );
 }

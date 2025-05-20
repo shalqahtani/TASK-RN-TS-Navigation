@@ -2,8 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import Searchbar from "@/component/Searchbar";
 import Line from "@/component/Line";
-import StaysList from "@/component/StaysList";
 import stays from "@/data/stays";
+import StaysList from "@/app/(tabs)/stays/StaysList";
 
 const StayIndex = () => {
   const [search, setSearch] = useState("");

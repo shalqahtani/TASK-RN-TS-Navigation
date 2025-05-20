@@ -1,7 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import TripCard from "./TripCard";
-import StayCard from "./StayCard";
+import StayCard from "@/component/StayCard";
 
 interface Stay {
   id: number;
